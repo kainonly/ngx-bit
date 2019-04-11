@@ -15,7 +15,7 @@ export class ListsService {
     this.action = name;
   }
 
-  factory(model: string, condition: any[] = [], like: any = [], refresh?: boolean, or?: boolean): Observable<any> {
+  factory(model: string, condition: any[] = [], like: any = [], refresh?: boolean, or?: any[]): Observable<any> {
     if (refresh) {
       this.bit.lists_page_index = 1;
     }
