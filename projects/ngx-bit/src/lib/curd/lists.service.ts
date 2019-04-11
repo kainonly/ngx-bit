@@ -15,19 +15,26 @@ export class ListsService {
     this.action = name;
   }
 
-  factory(model: string, condition: any[] = [], like: any = [], refresh?: boolean): Observable<any> {
+  factory(model: string, condition: any[] = [], like: any = [], refresh?: boolean, or?: boolean): Observable<any> {
     if (refresh) {
       this.bit.lists_page_index = 1;
     }
+
+    const body = {
+      page: {
+        limit: this.bit.page_limit,
+        index: this.bit.lists_page_index
+      },
+      where: condition,
+      like: like
+    };
+
+    if (or) {
+      body['or'] = or;
+    }
+
     return this.http
-      .req(model + this.action, {
-        page: {
-          limit: this.bit.page_limit,
-          index: this.bit.lists_page_index
-        },
-        where: condition,
-        like: like
-      })
+      .req(model + this.action, body)
       .pipe(
         map((res) => {
           if (!res.error) {
