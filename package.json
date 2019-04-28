@@ -4,7 +4,7 @@
     "start": "ng serve --host 0.0.0.0 --disable-host-check",
     "docs": " docsify serve ./docs",
     "build": "ng build ngx-bit",
-    "release": "cd dist/ngx-bit && npm publish"
+    "release": "cd dist/ngx-bit && npm publish --tag v6-lts"
   },
   "private": true,
   "dependencies": {
