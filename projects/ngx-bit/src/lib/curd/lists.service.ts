@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {map} from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import {map, switchMap} from 'rxjs/operators';
+import {Observable, of} from 'rxjs';
 import {HttpService} from '../base/http.service';
 import {BitService} from '../base/bit.service';
 
@@ -36,15 +36,14 @@ export class ListsService {
     return this.http
       .req(model + this.action, body)
       .pipe(
-        map((res) => {
+        switchMap((res) => res.error === 1 && res.msg === 'fail:page_max' ?
+          this.factory(model, condition, like, true) : of(res)
+        ),
+        map((res: any) => {
           if (!res.error) {
             this.bit.lists_totals = res.data.total;
           } else {
             this.bit.lists_totals = 0;
-            if (res.msg === 'fail:page_max') {
-              this.bit.lists_page_index = 1;
-              return this.factory(model, condition, like, refresh, or);
-            }
           }
           this.bit.lists_loading = false;
           this.bit.lists_all_checked = false;
