@@ -3,10 +3,11 @@
   "version": "1.9.11",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "*",
-    "@angular/core": "*",
-    "@ngx-pwa/local-storage": "*",
-    "sweetalert2": "*"
+    "@angular/common": "^6.1.10",
+    "@angular/core": "^6.1.10",
+    "ng-zorro-antd": "^1.8.1",
+    "@ngx-pwa/local-storage": "^6.2.5",
+    "sweetalert2": "^7.33.1"
   },
   "keywords": [
     "angular",
