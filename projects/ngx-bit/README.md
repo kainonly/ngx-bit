@@ -3,10 +3,11 @@ NGX-BIT
 
 基于 Angular 的辅助框架
 
-[![NPM version](https://badge.fury.io/js/ngx-bit.png)](http://badge.fury.io/js/ngx-bit)
+[![npm (tag)](https://img.shields.io/npm/v/ngx-bit/v6-lts.svg?style=flat-square)](https://ngx-bit.v1.kain.net.cn)
 [![Downloads](https://img.shields.io/npm/dm/ngx-bit.svg?style=flat-square)](https://www.npmjs.com/package/ngx-bit)
-[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg)](https://www.typescriptlang.org/)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kainonly/ngx-bit.js/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/ngx-bit.svg?style=flat-square)](https://www.npmjs.com/package/ngx-bit)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/kainonly/ngx-bit.js/master/LICENSE)
 
 ### 初始化操作
 
@@ -68,7 +69,7 @@ ng add ng-zorro-antd@1.8.x
 ngx-bit 的部分功能依赖于 `@ngx-pwa/local-storage@v6` `sweetalert2`
 
 ```shell
-npm install ngx-bit @ngx-pwa/local-storage@v6 sweetalert2 --save
+npm install ngx-bit@v6-lts @ngx-pwa/local-storage@v6 sweetalert2@7 --save
 ```
 
 > 也可以加入 Service Work 服务提高使用体验
