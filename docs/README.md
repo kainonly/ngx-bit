@@ -3,8 +3,7 @@ NGX-BIT
 
 Angular's CURD Auxiliary Framework
 
-[![npm](https://img.shields.io/npm/v/ngx-bit.svg?style=flat-square)](https://ngx-bit.kain.net.cn)
-[![npm (tag)](https://img.shields.io/npm/v/ngx-bit/v6-lts.svg?style=flat-square)](https://ngx-bit.v1.kain.net.cn)
+[![npm (tag)](https://img.shields.io/npm/v/ngx-bit/v7.svg?style=flat-square)](https://ngx-bit.v7.kain.net.cn)
 [![Downloads](https://img.shields.io/npm/dm/ngx-bit.svg?style=flat-square)](https://www.npmjs.com/package/ngx-bit)
 [![npm](https://img.shields.io/npm/dt/ngx-bit.svg?style=flat-square)](https://www.npmjs.com/package/ngx-bit)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
@@ -21,7 +20,7 @@ ng new exercise
 Ng-zorro-antd is an Angular implementation of Ant Design, which is also based on ng-zorro-antd for auxiliary extensions.
 
 ```shell
-ng add ng-zorro-antd
+ng add ng-zorro-antd@7
 ```
 
 ### Install Component
@@ -29,7 +28,7 @@ ng add ng-zorro-antd
 Some of the features of ngx-bit depend on `@ngx-pwa/local-storage` `sweetalert2`
 
 ```shell
-npm install ngx-bit @ngx-pwa/local-storage sweetalert2 --save
+npm install ngx-bit@v7 @ngx-pwa/local-storage@v7 sweetalert2@8 --save
 ```
 
 - **@ngx-pwa/local-storage** version >= 7.x
