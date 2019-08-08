@@ -3,8 +3,7 @@ NGX-BIT
 
 基于 Angular 的 CURD 辅助框架
 
-[![npm](https://img.shields.io/npm/v/ngx-bit.svg?style=flat-square)](https://ngx-bit.kain.net.cn)
-[![npm (tag)](https://img.shields.io/npm/v/ngx-bit/v6-lts.svg?style=flat-square)](https://ngx-bit.v1.kain.net.cn)
+[![npm (tag)](https://img.shields.io/npm/v/ngx-bit/v7.svg?style=flat-square)](https://ngx-bit.v7.kain.net.cn)
 [![Downloads](https://img.shields.io/npm/dm/ngx-bit.svg?style=flat-square)](https://www.npmjs.com/package/ngx-bit)
 [![npm](https://img.shields.io/npm/dt/ngx-bit.svg?style=flat-square)](https://www.npmjs.com/package/ngx-bit)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
@@ -21,7 +20,7 @@ ng new exercise
 ng-zorro-antd 是 Ant Design 的 Angular 实现, 这里也是基于 ng-zorro-antd 进行辅助扩展
 
 ```shell
-ng add ng-zorro-antd
+ng add ng-zorro-antd@7
 ```
 
 ### 安装组件
@@ -29,7 +28,7 @@ ng add ng-zorro-antd
 ngx-bit 的部分功能依赖于 `@ngx-pwa/local-storage` `sweetalert2`
 
 ```shell
-npm install ngx-bit @ngx-pwa/local-storage sweetalert2 --save
+npm install ngx-bit@v7 @ngx-pwa/local-storage@v7 sweetalert2@8 --save
 ```
 
 - **@ngx-pwa/local-storage** version >= 7.x
