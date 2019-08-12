@@ -15,8 +15,14 @@ export class OriginListsService {
 
   factory(model: string, condition: any[] = [], like: any = [], or?: any[]): Observable<any> {
     const body = {
-      where: condition,
-      like: like
+      where: condition.map(v => {
+        v[2] = v[2].trim();
+        return v;
+      }),
+      like: like.map(v => {
+        v.value = v.value.trim();
+        return v;
+      })
     };
 
     if (or) {

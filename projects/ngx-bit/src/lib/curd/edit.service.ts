@@ -21,7 +21,10 @@ export class EditService {
       return this.http.req(
         model + this.action,
         Object.assign(data, {
-          where: condition
+          where: condition.map(v => {
+            v[2] = v[2].trim();
+            return v;
+          })
         })
       );
     }
