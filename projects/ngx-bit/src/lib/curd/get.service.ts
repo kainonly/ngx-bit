@@ -15,20 +15,10 @@ export class GetService {
 
   factory(model: string, condition: any): Observable<any> {
     if (condition.hasOwnProperty('id')) {
-      return this.http.req(model + this.action, condition.map(v => {
-        if (typeof v[2] === 'string') {
-          v[2] = v[2].trim();
-        }
-        return v;
-      }));
+      return this.http.req(model + this.action, condition);
     } else {
       return this.http.req(model + this.action, {
-        where: condition.map(v => {
-          if (typeof v[2] === 'string') {
-            v[2] = v[2].trim();
-          }
-          return v;
-        })
+        where: condition
       });
     }
   }
