@@ -22,7 +22,9 @@ export class EditService {
         model + this.action,
         Object.assign(data, {
           where: condition.map(v => {
-            v[2] = v[2].trim();
+            if (typeof v[2] === 'string') {
+              v[2] = v[2].trim();
+            }
             return v;
           })
         })

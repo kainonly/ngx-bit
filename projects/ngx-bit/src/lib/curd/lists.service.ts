@@ -26,11 +26,15 @@ export class ListsService {
         index: this.bit.lists_page_index
       },
       where: condition.map(v => {
-        v[2] = v[2].trim();
+        if (typeof v[2] === 'string') {
+          v[2] = v[2].trim();
+        }
         return v;
       }),
       like: like.map(v => {
-        v.value = v.value.trim();
+        if (typeof v.value === 'string') {
+          v.value = v.value.trim();
+        }
         return v;
       })
     };
