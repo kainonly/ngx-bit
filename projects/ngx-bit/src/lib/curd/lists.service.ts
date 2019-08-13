@@ -25,12 +25,7 @@ export class ListsService {
         limit: this.bit.page_limit,
         index: this.bit.lists_page_index
       },
-      where: condition.map(v => {
-        if (typeof v[2] === 'string') {
-          v[2] = v[2].trim();
-        }
-        return v;
-      }),
+      where: condition,
       like: like.map(v => {
         if (typeof v.value === 'string') {
           v.value = v.value.trim();

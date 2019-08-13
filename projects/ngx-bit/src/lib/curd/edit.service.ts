@@ -21,12 +21,7 @@ export class EditService {
       return this.http.req(
         model + this.action,
         Object.assign(data, {
-          where: condition.map(v => {
-            if (typeof v[2] === 'string') {
-              v[2] = v[2].trim();
-            }
-            return v;
-          })
+          where: condition
         })
       );
     }
