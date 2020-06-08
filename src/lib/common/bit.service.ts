@@ -86,7 +86,7 @@ export class BitService {
   /**
    * Control panel search object
    */
-  search: Search | object = {};
+  search: Search | any = {};
 
   /**
    * Lists data loading status
