@@ -1,0 +1,29 @@
+{
+  "name": "ngx-bit",
+  "version": "8.10.3",
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
+    "@ngx-pwa/local-storage": "^8.0.0",
+    "sweetalert2": "^9.0.0",
+    "ajv": "^6.0.0"
+  },
+  "keywords": [
+    "angular",
+    "ng-zorro",
+    "ngx"
+  ],
+  "author": {
+    "name": "kain",
+    "email": "zhangtqx@vip.qq.com"
+  },
+  "license": "MIT",
+  "homepage": "https://ngx-bit.kainonly.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kainonly/ngx-bit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kainonly/ngx-bit/issues"
+  }
+}
