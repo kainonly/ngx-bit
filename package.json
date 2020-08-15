@@ -1,8 +1,7 @@
 {
-  "name": "angular6-support",
+  "name": "ngx-bit-case",
   "scripts": {
     "start": "ng serve",
-    "docs": " docsify serve ./docs",
     "build": "ng build ngx-bit",
     "release": "cd dist/ngx-bit && npm publish --tag v6-lts"
   },
