@@ -1,9 +1,9 @@
-import {en_US, zh_CN} from 'ng-zorro-antd';
+import { en_US, zh_CN } from 'ng-zorro-antd';
 
 export const environment = {
   production: false,
   bit: {
-    originUrl: 'http://workspace:9501',
+    originUrl: 'http://localhost:9501',
     staticUrl: 'https://cdn.kainonly.com/',
     iconUrl: 'https://cdn.kainonly.com/',
     namespace: '/system',
@@ -19,14 +19,14 @@ export const environment = {
         nzXl: 9,
         nzLg: 10,
         nzMd: 14,
-        nzSm: 24,
+        nzSm: 24
       },
       submit: {
-        nzXXl: {span: 8, offset: 4},
-        nzXl: {span: 9, offset: 5},
-        nzLg: {span: 10, offset: 6},
-        nzMd: {span: 14, offset: 6},
-        nzSm: {span: 24, offset: 0}
+        nzXXl: { span: 8, offset: 4 },
+        nzXl: { span: 9, offset: 5 },
+        nzLg: { span: 10, offset: 6 },
+        nzMd: { span: 14, offset: 6 },
+        nzSm: { span: 24, offset: 0 }
       }
     },
     formLabelCol: {
@@ -36,7 +36,7 @@ export const environment = {
         nzLg: 6,
         nzMd: 7,
         nzSm: 24
-      },
+      }
     },
     localDefault: 'zh_cn',
     localeBind: new Map([
