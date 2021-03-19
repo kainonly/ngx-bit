@@ -16,11 +16,17 @@ export class BitSearchStartDirective {
   ) {
   }
 
-  @HostListener('keydown.enter') onenter() {
+  @HostListener('keydown.enter', ['$event.target']) onenter(el: Element) {
+    if (el.tagName.toLowerCase() !== 'input') {
+      return;
+    }
     this.searchStart();
   }
 
-  @HostListener('click') onclick() {
+  @HostListener('click', ['$event.target']) onclick(el: Element) {
+    if (el.tagName.toLowerCase() === 'input') {
+      return;
+    }
     this.searchStart();
   }
 
