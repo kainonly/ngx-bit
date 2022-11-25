@@ -1,13 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {HttpService} from '../base/http.service';
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { HttpService } from "../base/http.service";
 
 @Injectable()
 export class OriginListsService {
-  private action = '/originLists';
+  private action = "/originLists";
 
-  constructor(private http: HttpService) {
-  }
+  constructor(private http: HttpService) {}
 
   customAction(name: string) {
     this.action = name;
@@ -23,7 +22,7 @@ export class OriginListsService {
     };
 
     if (or) {
-      body['or'] = or;
+      body["or"] = or;
     }
 
     return this.http.req(model + this.action, body);

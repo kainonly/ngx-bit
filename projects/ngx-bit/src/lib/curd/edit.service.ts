@@ -1,20 +1,19 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {HttpService} from '../base/http.service';
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { HttpService } from "../base/http.service";
 
 @Injectable()
 export class EditService {
-  private action = '/edit';
+  private action = "/edit";
 
-  constructor(private http: HttpService) {
-  }
+  constructor(private http: HttpService) {}
 
   customAction(name: string) {
     this.action = name;
   }
 
   factory(model: string, data: any, condition: any = []): Observable<any> {
-    data['switch'] = false;
+    data["switch"] = false;
     if (!condition) {
       return this.http.req(model + this.action, data);
     } else {

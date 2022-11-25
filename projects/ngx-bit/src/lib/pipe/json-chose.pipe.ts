@@ -1,6 +1,6 @@
-import {Pipe, PipeTransform} from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
-@Pipe({name: 'JSONChose'})
+@Pipe({ name: "JSONChose" })
 export class JsonChosePipe implements PipeTransform {
   transform(value: string, locale?: any): any {
     try {

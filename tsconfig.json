@@ -23,9 +23,6 @@
       ],
       "ngx-bit/*": [
         "dist/ngx-bit/*"
-      ],
-      "dev-ngx-bit": [
-        "projects/ngx-bit/src/public_api.ts"
       ]
     }
   }
