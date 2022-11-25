@@ -1,11 +1,9 @@
 {
   "name": "ngx-bit-case",
   "scripts": {
-    "start": "ng serve",
     "build": "ng build ngx-bit",
     "release": "cd dist/ngx-bit && npm publish --tag v6-lts"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/common": "^6.1.0",
@@ -32,6 +30,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "~4.3.0",
     "ng-packagr": "^4.1.0",
+    "prettier": "^2.8.0",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",

@@ -1,15 +1,14 @@
-import {Injectable} from '@angular/core';
-import {map, switchMap} from 'rxjs/operators';
-import {Observable, of} from 'rxjs';
-import {HttpService} from '../base/http.service';
-import {BitService} from '../base/bit.service';
+import { Injectable } from "@angular/core";
+import { map, switchMap } from "rxjs/operators";
+import { Observable, of } from "rxjs";
+import { HttpService } from "../base/http.service";
+import { BitService } from "../base/bit.service";
 
 @Injectable()
 export class ListsService {
-  private action = '/lists';
+  private action = "/lists";
 
-  constructor(private http: HttpService, private bit: BitService) {
-  }
+  constructor(private http: HttpService, private bit: BitService) {}
 
   customAction(name: string) {
     this.action = name;
@@ -27,7 +26,7 @@ export class ListsService {
       },
       where: condition,
       like: like.map(v => {
-        if (typeof v.value === 'string') {
+        if (typeof v.value === "string") {
           v.value = v.value.trim();
         }
         return v;
@@ -35,28 +34,24 @@ export class ListsService {
     };
 
     if (or) {
-      body['or'] = or;
+      body["or"] = or;
     }
 
-    return this.http
-      .req(model + this.action, body)
-      .pipe(
-        switchMap((res) => res.error === 1 && res.msg === 'fail:page_max' ?
-          this.factory(model, condition, like, true) : of(res)
-        ),
-        map((res: any) => {
-          if (!res.error) {
-            this.bit.lists_totals = res.data.total;
-          } else {
-            this.bit.lists_totals = 0;
-          }
-          this.bit.lists_loading = false;
-          this.bit.lists_all_checked = false;
-          this.bit.lists_indeterminate = false;
-          this.bit.lists_disabled_action = true;
-          this.bit.lists_checked_number = 0;
-          return res;
-        })
-      );
+    return this.http.req(model + this.action, body).pipe(
+      switchMap(res => (res.error === 1 && res.msg === "fail:page_max" ? this.factory(model, condition, like, true) : of(res))),
+      map((res: any) => {
+        if (!res.error) {
+          this.bit.lists_totals = res.data.total;
+        } else {
+          this.bit.lists_totals = 0;
+        }
+        this.bit.lists_loading = false;
+        this.bit.lists_all_checked = false;
+        this.bit.lists_indeterminate = false;
+        this.bit.lists_disabled_action = true;
+        this.bit.lists_checked_number = 0;
+        return res;
+      })
+    );
   }
 }
