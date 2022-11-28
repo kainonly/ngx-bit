@@ -18,7 +18,7 @@ npm install ngx-bit -S
 
 ## Documentation
 
-**语雀：** www.yuque.com/kainonly/ngx-bit
+**文档：** https://www.kainonly.com/docs/ngx-bit/latest/快速开始/
 
 > Thanks to [JetBrains](https://www.jetbrains.com/?from=ngx-bit) for providing free open source license sponsorship
 >
