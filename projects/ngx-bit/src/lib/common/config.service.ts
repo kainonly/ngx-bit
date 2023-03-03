@@ -1,15 +1,16 @@
-import {Injectable} from '@angular/core';
-import {NzI18nInterface} from 'ng-zorro-antd';
-import {of} from 'rxjs';
+import { Injectable } from "@angular/core";
+import { NzI18nInterface } from "ng-zorro-antd";
+import { of } from "rxjs";
 
 @Injectable()
 export class ConfigService {
-  originUrl = '';
-  staticUrl = '';
-  iconUrl = '';
-  namespace = '';
-  uploadsUrl = '';
-  uploadsPath = '';
+  originUrl = "";
+  staticUrl = "";
+  iconUrl = "";
+  namespace = "";
+  uploadsUrl = "";
+  uploadsPath = "";
+  uploadsOption?: any;
   withCredentials = false;
   httpInterceptor = false;
   breadcrumbTop = 0;
@@ -19,20 +20,20 @@ export class ConfigService {
     submit: {}
   };
   formLabelCol: any = {
-    common: {},
+    common: {}
   };
-  localeDefault = 'zh_cn';
+  localeDefault = "zh_cn";
   localeBind: Map<string, NzI18nInterface> = new Map();
-  i18nDefault = 'zh_cn';
-  i18nContain: any[] = ['zh_cn'];
+  i18nDefault = "zh_cn";
+  i18nContain: any[] = ["zh_cn"];
   i18nSwitch: any[] = [
     {
-      i18n: 'zh_cn',
+      i18n: "zh_cn",
       name: {
-        zh_cn: '中文',
-        en_us: 'Chinese'
+        zh_cn: "中文",
+        en_us: "Chinese"
       }
     }
   ];
-  interceptor = (res) => of(res);
+  interceptor = res => of(res);
 }
