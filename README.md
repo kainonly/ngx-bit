@@ -8,7 +8,7 @@ NGX-BIT is an assistant to NG-ZORRO, the goal is to help the unified development
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
 [![GitHub license](https://img.shields.io/github/license/kainonly/ngx-bit?style=flat-square)](https://raw.githubusercontent.com/kainonly/ngx-bit.js/main/LICENSE)
 
-> Will be archived, there are some new ideas about this kind of components, please pay attention to [weplanx team](https://github.com/weplanx)
+> Has been archived, use https://github.com/weplanx instead
 
 ## Installation
 
@@ -18,7 +18,12 @@ npm install ngx-bit -S
 
 ## Documentation
 
-**文档：** https://www.kainonly.com/docs/ngx-bit/latest/快速开始/
+- v11.x https://p.kdocs.cn/s/IPHCUBIALQ
+- v10.x https://p.kdocs.cn/s/IXOSUBIAIA
+- v9.x https://p.kdocs.cn/s/O3NSUBIALQ
+- v8.x https://p.kdocs.cn/s/I3ISUBIAD4
+- v7.x https://p.kdocs.cn/s/LDJSUBIAIA
+- v1.x https://p.kdocs.cn/s/K7ISUBIA7M
 
 > Thanks to [JetBrains](https://www.jetbrains.com/?from=ngx-bit) for providing free open source license sponsorship
 >
